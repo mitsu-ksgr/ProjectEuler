@@ -6,19 +6,18 @@
  *       http://odz.sakura.ne.jp/projecteuler/index.php?cmd=read&page=Problem%2010
  *
  *****************************************************************************/
-#include <stdbool.h>
-#include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
 
-typedef unsigned long long ULL;
-
-bool isPrime(ULL n)
+bool isPrime(uint64_t n)
 {
     bool result = false;
     if(n <= 2) {
         result = n == 2;
     } else {
-        for(ULL i = 2; i < n && (result = n % i++);)
+        for(uint64_t i = 2; i < n && (result = n % i++);)
             ;
     }
     return result;
@@ -26,15 +25,12 @@ bool isPrime(ULL n)
 
 int main()
 {
-    const ULL kLimit = 2000000UL;
+    const uint64_t kLimit = 2000000;
 
-    // 素直にやると計算量が多過ぎるので、工夫が必要
-    ULL sum = 0UL;
-    for(ULL i = 0; i < kLimit; ++i) {
-        if(isPrime(i)) {
+    uint64_t sum = 2;
+    for(uint64_t i = 3; i < kLimit; i+=2) {
+        if(isPrime(i))
             sum += i;
-            printf("add %10lld: SUM=%lld\n", i, sum);
-        }
     }
 
     printf("Summation primes = %lld\n", sum);
