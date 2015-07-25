@@ -2,8 +2,8 @@
  *  Project Euler: Problem 8
  *      - Largest product in a series -
  *
- *  URL: https://projecteuler.net/problem=7
- *       http://odz.sakura.ne.jp/projecteuler/index.php?cmd=read&page=Problem%207
+ *  URL: https://projecteuler.net/problem=8
+ *       http://odz.sakura.ne.jp/projecteuler/index.php?cmd=read&page=Problem%208
  *
  *****************************************************************************/
 #include <stdio.h>

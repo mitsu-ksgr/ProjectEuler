@@ -28,7 +28,8 @@ int main()
     const uint64_t kLimit = 2000000;
 
     uint64_t sum = 2;
-    for(uint64_t i = 3; i < kLimit; i+=2) {
+    for(uint64_t i = 3; i <= kLimit; i+=2) {
+        printf("%lld\n", i);
         if(isPrime(i))
             sum += i;
     }
